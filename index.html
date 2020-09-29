@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/CSS" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/mediaQuery.css">
+    <title>Dashboard JQuery, Ajax, HTML5 and CSS3</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="template-header"> 
+        <i class="fa fa-github"></i>
+        <p>Lightweight Admin Template</p>
+      </div>
+      <div class="profile">
+        <div class="dropdown">
+          <button class="arrow">
+            <img src="IMG/imageCV.png" alt="image_profile">
+            <p>Irfan</p>
+            <i class="arrow down"></i>
+          </button>
+          <ul class="dropdown">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="sideNavBar">
+        <ul>
+          <a href="#"><li class="element"><i class="fa fa-dashboard"></i> Dashboard</li></a>
+          <a href="#"><li class="element"><i class="fa fa-television" aria-hidden="true"></i> IU Elements</li></a>
+          <a href="#"><li class="element"><i class="fa fa-table" aria-hidden="true"></i> Tables</li></a>
+          <a href="#"><li class="element"><i class="fa fa-wpforms" aria-hidden="true"></i> Forms</li></a>
+        </ul> 
+        <ul class="mobile-navbar">
+          <a href="#"><li class="element"><i class="fa fa-dashboard"></i></li></a>
+          <a href="#"><li class="element"><i class="fa fa-television" aria-hidden="true"></i></li></a>
+          <a href="#"><li class="element"><i class="fa fa-table" aria-hidden="true"></i></li></a>
+          <a href="#"><li class="element"><i class="fa fa-wpforms" aria-hidden="true"></i></li></a>
+        </ul> 
+        <ul class="mobile-comment">
+          <li>By Jose MMorales</li>
+          <li>
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-android" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a>
+          </li>
+        </ul> 
+        <ul>
+          <li>Crafted with <i class="fa fa-heart-o"></i>by Jose MMorales</li>
+          <li>
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-android" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a>
+          </li>
+        </ul> 
+      </div>
+      <div class="dashBoard">
+        <div class="row">
+          <div class="box total">
+            <div class="heading">
+              <p>Total in Progress Tickets</p>
+              <i class="fa fa-external-link"></i>
+            </div>
+            <div class="number">
+              <p>5</p>
+            </div>
+          </div>
+          <div class="box open">
+            <div class="heading">
+              <p>Total Open Tickets </p>
+              <i class="fa fa-external-link"></i>
+            </div>
+            <div class="number">
+              <p>12</p>
+            </div>
+          </div>
+          <div class="box closed">
+            <div class="heading">
+              <p>Total Closed Tickets</p>
+              <i class="fa fa-external-link"></i> 
+            </div>
+            <div class="number">
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box updated">
+            <div class="heading">
+              <p>Last Updated Tickets</p>
+              <i class="fa fa-external-link"></i>
+            </div>
+            <div class="tickets">
+              <div class="info">
+                <p><b>Info!</b> This status may have time delay</p>
+                <p id="remove">X</p>
+              </div>
+              <div class="form table" style="overflow-x:auto;"> 
+                <table id="myTable" class="table tablesorter">
+                  <thead>
+                    <tr>
+                      <th># <i class="fa fa-sort"></i><i class="fa fa-sort-desc"></i><i class="fa fa-sort-asc"></i></th>  
+                      <th>Datetime <i class="fa fa-sort"></i><i class="fa fa-sort-desc"></i><i class="fa fa-sort-asc"></i></th> 
+                      <th>Updated By <i class="fa fa-sort"></i><i class="fa fa-sort-desc"></i><i class="fa fa-sort-asc"></i></th> 
+                      <th>Status <i class="fa fa-sort"></i><i class="fa fa-sort-desc"></i><i class="fa fa-sort-asc"></i></th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form pagination">
+                <a href="#" class="previousButton" data-page="prev">Previous</a>
+                <a href="#" class="page active" data-page="1">1</a>
+                <a href="#" class="page" data-page="2">2</a>
+                <a href="#" class="page" data-page="3">3</a>
+                <a href="#" class="page" data-page="4">4</a>
+                <a href="#" class="page" data-page="5">5</a>
+                <a href="#" class="nextButton" data-page="next">Next</a>
+              </div>
+            </div>
+          </div>
+          <div class="box create">
+            <div class="heading">
+              <p>Create Tickets</p>
+            </div>
+             <form id="formid" method="post">
+              <div class="tickets">
+                <input type="text"  id= "FormTitle" class="form" name="input" placeholder="Tickets Title">
+                <textarea rows="4"  id= "FormTextArea" class="form" cols="40" name="comment" placeholder="Tickets Description"></textarea>
+                <div class="form email">
+                  <input type="email" id= "formEmail" name="email" placeholder="Tickets Assignee">
+                  <label>@something.com</label>
+                </div>
+                <button type="submit" id="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Create</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="JS/functionsAjax.js"></script>
+    <script src="JS/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+  </body>
+</html>
