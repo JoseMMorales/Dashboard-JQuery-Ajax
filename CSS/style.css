@@ -1,0 +1,271 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  min-width: fit-content;
+}
+/* HEADER SITE*/
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: grey; 
+}
+.header .template-header{
+  display: flex;
+  flex-direction: row;
+}
+.template-header i{
+  font-size: 50px;
+  color: black;
+  padding: 5px 5px 5px 5px;
+}
+.template-header p{
+  padding: 20px 0 0 5px;
+  font-size: 19px;
+  color: white;
+}
+.profile{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(71, 68, 71);
+}
+/* DROPDOWN HEADER AND NAVBAR */
+.dropdown{
+  position: relative;
+}
+.profile button{
+  position: relative;
+  width: 222px;
+  outline:none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(71, 68, 71);
+} 
+.dropdown ul{
+  position: absolute;
+  width: 100%;
+  background: #ccc;
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(-90deg);
+  transition: 0.5s;
+}
+.dropdown ul.active{
+  transform: perspective(1000px) rotateX(0deg);
+}
+.dropdown ul li{
+  list-style: none;
+}
+.dropdown li a{
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(71, 68, 71);
+  color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+} 
+.dropdown ul li a:hover{ background-color:rgba(37, 145, 247, 0.993) }
+.arrow{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 10px;
+}
+.arrow i{
+  display: inline-block;
+  padding: 3px;
+  margin: 16px 0 0 60px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+.arrow img{
+  width: 44px;   
+  padding: 0 0 5px 5px;
+  border-radius: 100%; 
+}
+.arrow p{
+  padding: 14px;
+  color: white;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+/* BOX CONTENT SITE */
+.content{
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+/* SIDEBAR SITE */
+.sideNavBar{
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1; 
+  background-color: rgb(97, 96, 97);
+  color: white;
+}
+.sideNavBar ul{ flex-direction: column; }
+.element{ 
+  padding:20px 20px 10px 10px; 
+  color: #fff; 
+}
+.sideNavBar ul:nth-child(1) a{ text-decoration: none; }
+.sideNavBar ul:nth-child(4) i{ 
+  padding: 4px; 
+  width: 24px; 
+  font-size: 1.3em;
+  color: #fff;
+}
+.sideNavBar ul:nth-child(4){
+  margin-top: 50px;
+  padding: 20px;
+  list-style-type: none;
+}
+/* DASHBOARD SITE */
+.dashBoard{
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+  background-color: white;
+} 
+/* ROW OF BOXES */
+.row{ 
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* EACH BOX */
+.box{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+/* HEADING OF EACH BOX */
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 10px 14px 6px;
+  font-weight: bold; 
+  font-size: 16px;
+  color:white;
+}
+/* CONTENT EACH BOX IN DASHBOARD */
+.number{
+  color: black;
+  font-size: 95px;
+  font-weight: lighter;
+  text-align: center;
+  box-shadow: 0 4px 1px 0 rgb(216, 213, 213); 
+}
+.box.total .heading{ background-color: orange; }
+.box.total .number{ border: orange 1px solid; }
+.box.open .heading{ background-color: rgb(64, 204, 64); }
+.box.open .number{ border: rgb(64, 204, 64) 1px solid; }
+.box.closed .heading{ background-color: red; }
+.box.closed .number{ border: red 1px solid; }
+.box.updated .heading{ background-color: grey; color: black;}
+.box.updated .tickets{ border: grey 1px solid; }
+.box.create .heading{ background-color: rgba(68, 192, 250, 0.993); }
+.box.create .tickets{ border: rgba(68, 192, 250, 0.993) 1px solid; }
+.tickets{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 0 4px 1px 0 rgb(216, 213, 213);
+}
+.form{ 
+  margin: 5px; 
+  border: rgb(226, 224, 224) 2px solid; 
+  resize: none
+}
+.tickets input{ 
+  height: 35px; 
+}
+input[type="text"]::placeholder, textarea::placeholder, input[type="email"]::placeholder { padding: 10px; } 
+input[type="email"]{ border: none; width: 100%; }
+.btn{
+  width: 120px;
+  margin: 0 0 10px 5px;
+  padding: 15px 14px;
+  background-color:rgba(68, 192, 250, 0.993);
+  border-radius: 5%;
+  border: none;
+  color: white;
+}
+.form.email{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form label{
+  justify-content: end;
+  padding: 10px;
+  color: black;
+  background-color: rgb(189, 178, 178);
+}
+/* INFO IN UPDATED BOX */
+.info{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 10px;
+  color: red;
+  border: red dashed 1px;
+}
+.info p:nth-child(2):hover{
+  font-weight: bold;
+  transform: scale(2.2);
+}
+/* TABLE IN UPDATED BOX */
+.form.table{ 
+  border: none; 
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  color: black;
+}
+th{ 
+  background-color: white;
+  border: rgb(187, 181, 181) 1px solid; 
+  border-bottom: rgb(187, 181, 181) 2px solid; 
+}
+tr > *{ 
+  border-left: rgb(187, 181, 181) 1px solid;
+  border-right: rgb(187, 181, 181) 1px solid;
+}
+tr:nth-child(3) { border-bottom: rgb(187, 181, 181) 1px solid; }
+tr:nth-child(odd) {background-color: rgb(236, 236, 236)}  
+
+/* PAGINATION IN UPDATED BOX */
+.form.pagination {border: none; }
+.pagination {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 5px 20px;
+}
+.pagination a {
+  padding: 6px 10px;
+  text-decoration: none;
+  color: rgb(81, 199, 235);
+  border: 1px solid rgb(230, 225, 225);
+}
+.active{
+  background-color: rgb(190, 199, 202);
+}
+.disable{
+  pointer-events: none;
+}
