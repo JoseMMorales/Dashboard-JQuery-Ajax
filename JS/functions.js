@@ -77,6 +77,7 @@ function populateTickets(tickets) {
     const ticketRow = `<tr><td>${ticket.id}</td><td>${ticket.updatedBy}</td><td>${ticket.datetime}</td><td>${ticket.status}</td></tr>`;
     ticketsTemplate = ticketsTemplate + ticketRow;
   });
+  
   tableBody.html(ticketsTemplate);
   $('#myTable').trigger('update'); // LET TABLESORTER PLUGIN KNOW ABOUT NEW DATA IN TABLE HAS BEEN UPDATED
 }
@@ -108,6 +109,7 @@ function updateHighlight(actualPage) {
   } else if (activeElement === 'prev') {
     $(active).prev('.page').addClass('active');
   }
+
   $('.page').filter(actualPage.currentTarget).addClass('active');
 }
 
@@ -126,3 +128,5 @@ function disablePrevNextButton() {
 function initialPrevDisableButton() {
   $('.pagination a:nth-child(1)').addClass('disable');
 };
+
+
