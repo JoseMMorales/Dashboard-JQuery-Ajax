@@ -1,7 +1,7 @@
 # Lightweight Admin dashboard
-Admin dashboard template designed to be simple and totally functional using AJAX, JQuery and JSON Server. It comes with creation ticketing section where data is stored in a JSON file, last update table to find additional information about tickets in database. 
+![Screenshot 2020-09-30 at 09 21 34](https://user-images.githubusercontent.com/43299285/94655113-5cfd8780-02fe-11eb-8e71-87aa4df3b0bc.png)
 
-Interesting product for front-end developers that want to start in a similar project to work with.
+Admin dashboard template designed to be simple and totally functional using AJAX, JQuery and JSON Server. It comes with creation ticketing section where data is stored in a JSON file and last update table to find additional information about tickets in database. 
 
 ### JSON Server:
 Straight forward API to raise queries with AJAX, keeping JSON files in your records connected locally.
@@ -9,6 +9,11 @@ Straight forward API to raise queries with AJAX, keeping JSON files in your reco
 It is just installed in no more than 30 seconds!!!..
 
 [CLICK HERE to download JSON Server](https://github.com/typicode/json-server)
+
+#### Routes used in this project:
+
+* POST /tickets
+* GET /posts?_page=1&_limit=3
 
 ### JQuery plugin (Tablesorter):
 * Tablesorter v2.31.3
