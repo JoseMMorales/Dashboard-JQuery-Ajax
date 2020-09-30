@@ -38,7 +38,7 @@ function api(object) {
     data: object.data,
     success: function (data) {
       if (object.success && typeof object.success === 'function') object.success(data);
-      alert(object.success);
+      // alert(object.success);
     },
     error: function (xhr, resp, text) {
       if (object.error && typeof object.success === 'function') object.error(data);
